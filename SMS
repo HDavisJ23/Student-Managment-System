@@ -4,29 +4,32 @@ print("Please make a selection: \n1. View Student info \n2. Update Student Data\
 Menu = int(input("Enter a Menu # to proceed "))
 
 class Student:
-    def __init__(self, FirstName, LastName, StudentID):
+    def __init__(self, FirstName, LastName, StudentID, Classification):
         self.FirstName = FirstName
         self.LastName = LastName
         self.StudentID = StudentID
-        self.email = FirstName + '-' + LastName + '@vsu.edu'
+        self.Email = FirstName + '-' + LastName + '@vsu.edu'
+        self.Classfiction = Classfication
     def __str__(self):
-        return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}"
-    def __update_Student__(self, FirstName=None, LastName=None, StudentID=None):
+        return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}, {self.Email}, {Classfication}"
+    def __update_Student__(self, FirstName=None, LastName=None, StudentID=None Email=none Classfication = none):
         if FirstName: self.FirstName = FirstName
         if LastName: self.LastName = LastName
         if StudentID: self.StudentID =StudentID
+        if Email: self.Email = Email
+        if Classfication: self.Classfication = Classfication
 
 # Utilize a list to store student information
-Students = [ Student("Ethan", "Waler", "V0001"),
-    Student("Sophia","Martinez", "V0002" ),
-    Student("Liam", "Johnson", "V0003"),
-    Student("Olivia", "Brown", "V0004"),
-    Student("Noha", "Smith", "V0005"),
-    Student("Ava", "Wilson", "V0006"),
-    Student("James", "Davis", "V0007"),
-    Student("Isabella", "Garca", "V0008"),
-    Student("William", "Lee", "V0009"),
-    Student("Mia", "Anderson", "V0010"),
+Students = [ Student("Ethan", "Waler", "V0001", "Sophomore"),
+    Student("Sophia","Martinez", "V0002", "Sophomore"),
+    Student("Liam", "Johnson", "V0003", "Sophomore"),
+    Student("Olivia", "Brown", "V0004","Graduate"),
+    Student("Noha", "Smith", "V0005", "Graduate"),
+    Student("Ava", "Wilson", "V0006", "Sophomore"),
+    Student("James", "Davis", "V0007", "Freshman"),
+    Student("Isabella", "Garca", "V0008", "Graduate"),
+    Student("William", "Lee", "V0009", "Sophomore"),
+    Student("Mia", "Anderson", "V0010", "Junior"),
 ]
 if (Menu == 1):
     student_number = int(input("Enter Student# between 1 and 10 "))
