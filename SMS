@@ -8,6 +8,7 @@ class Student:
         self.FirstName = FirstName
         self.LastName = LastName
         self.StudentID = StudentID
+        self.email = FirstName + '-' + LastName + '@vsu.edu'
     def __str__(self):
         return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}"
     def __update_Student__(self, FirstName=None, LastName=None, StudentID=None):
