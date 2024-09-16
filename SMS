@@ -11,7 +11,7 @@ class Student:
         self.Email = FirstName + '-' + LastName + '@vsu.edu'
         self.Classfiction = Classfication
     def __str__(self):
-        return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}, {self.Email}, {Classfication}"
+        return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}, {self.Email}, {self.Classfication}"
     def __update_Student__(self, FirstName=None, LastName=None, StudentID=None Email=none Classfication = none):
         if FirstName: self.FirstName = FirstName
         if LastName: self.LastName = LastName
