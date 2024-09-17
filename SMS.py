@@ -8,16 +8,14 @@ class Student:
         self.FirstName = FirstName
         self.LastName = LastName
         self.StudentID = StudentID
-        self.Email = FirstName + '-' + LastName + '@vsu.edu'
-        self.Classfiction = Classfication
+        self.Classification = Classification
     def __str__(self):
-        return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}, {self.Email}, {self.Classfication}"
-    def __update_Student__(self, FirstName=None, LastName=None, StudentID=None Email=none Classfication = none):
+        return f"Student Name: {self.FirstName} {self.LastName}, ID: {self.StudentID}, {self.Classification}"
+    def __update_Student__(self, FirstName=None, LastName=None, StudentID=None, Classification = None):
         if FirstName: self.FirstName = FirstName
         if LastName: self.LastName = LastName
         if StudentID: self.StudentID =StudentID
-        if Email: self.Email = Email
-        if Classfication: self.Classfication = Classfication
+        if Classification: self.Classification = Classification
 
 # Utilize a list to store student information
 Students = [ Student("Ethan", "Waler", "V0001", "Sophomore"),
