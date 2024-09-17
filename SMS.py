@@ -37,7 +37,7 @@ totalStudents = len(Students)
 
 # ###### WE COULD DEFINE A DELETE FUNCTION TO REMOVE STUDENTS FROM THE LIST YOU AND USE ETHER del or pop()
 # https://www.youtube.com/watch?v=yOgrzw1FW3I or https://www.youtube.com/watch?v=qLKXbc_PBso or https://www.youtube.com/watch?v=7TY58o67Ryk
-
+# I JUST THOUGHT OF IT, WE ALSO NEED A METHOD TO ADD NEW STUDENTS
 # Initialize menu at 0 to use in while loop so updates can stay relevent while program is running
 Menu = 0
 while (0 <= Menu <= 4):
