@@ -1,6 +1,6 @@
 print("Welcome to Group 1 Student Management System")
 print("             MENU                   ")
-print("Please make a selection: \n1. View Student info \n2. Update Student Data\n")
+print("Please make a selection: \n1. View Student info \n2. Update Student Data \n3. View All Students \n4. Exit")
 Menu = int(input("Enter a Menu # to proceed "))
 
 class Student:
@@ -29,12 +29,30 @@ Students = [ Student("Ethan", "Waler", "V0001", "Sophomore"),
     Student("William", "Lee", "V0009", "Sophomore"),
     Student("Mia", "Anderson", "V0010", "Junior"),
 ]
+totalStudents = len(Students)
 if (Menu == 1):
-    student_number = int(input("Enter Student# between 1 and 10 "))
+        
+    student_number = int(input(f"Enter Student# between 1 and {totalStudents} : " ))
 
-    if 1<= student_number <= 10:
+    if 1<= student_number <= len(Students):
         print(Students[student_number - 1])
     else: 
         print("Invalid entry student", student_number ,"does not exist")
-if (Menu == 2):
+elif (Menu == 2):
     print("You select to update student info")
+    print("please select a student")
+    student_number = int(input(f"Enter Student# between 1 and {totalStudents} : " ))
+    if (1<= student_number <= totalStudents):
+        student = Students[student_number-1]
+        print(f"You have selected to update {student}")
+
+elif (Menu == 3):
+    for i in range (len(Students)):        
+        print(f"Students{i + 1}: {Students[i]}, email")
+
+elif (Menu == 4):
+    print("Exiting the program... \nGoodbye!")
+    exit()
+
+      
+
