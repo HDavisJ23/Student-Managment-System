@@ -42,11 +42,14 @@ Students = [ Student("Ethan", "Waler", "V0001", "Sophomore"),
 
 totalStudents = len(Students)
 Menu = 0
-while (0 <= Menu <= 4):
+while (True):
+    
     print("\n             MENU                   ")
     print("Please make a selection: \n1. View Student info \n2. Update Student Data \n3. Add/Remove Students \n4. View All Students \n5. Exit")    
 
     Menu = int(input("\nEnter a Menu # to proceed "))
+    if (Menu > 5):
+       print("Please select a number between 1 and 5")
 
     # Created options for Users when Menu 1 is selected (Here it only print class student str's return)
     if (Menu == 1):
